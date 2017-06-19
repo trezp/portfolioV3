@@ -10,12 +10,22 @@ import Nav from './Nav';
 import Cats from './Cats';
 import Flowers from './Flowers';
 import Rainbows from './Rainbows';
+import apiKey from './config.js';
+import Photos from './Photos'
+
+const Search = (props) => (
+  <form>
+    <input type="text" name="search"></input>
+    <button type="submit">Search!</button>
+  </form>
+)
 
 class App extends Component {
   render() {
     return (
       <div className="container">
         <h1>Welcome to Pick N Flick!</h1>
+        <Search/>
         <BrowserRouter>
           <div>
             <Nav/>
@@ -24,6 +34,9 @@ class App extends Component {
               <Route path="/cats" component={Cats}/>
               <Route path="/flowers" component={Flowers}/>
               <Route path="/rainbows" component={Rainbows}/>
+              <Route path="/:query"
+                     render={({match})=> (<Photos photo={match.params.query}
+                     api_key={apiKey}/>)}/>
             </Switch>
           </div>
         </BrowserRouter>

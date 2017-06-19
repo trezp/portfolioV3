@@ -9,8 +9,9 @@ class Photos extends React.Component {
       photos: []
     };
   }
-
+  
   componentDidMount(){
+    console.log(this.props.photo)
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${this.props.api_key}&tags=${this.props.photo}&per_page=25&format=json&nojsoncallback=1`)
     .then((response) => {
       const photos = response.data.photos.photo.map( photo => {
