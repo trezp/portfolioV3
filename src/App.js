@@ -24,8 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Welcome to Pick N Flick!</h1>
-        <Search/>
+        <h1>Best of Flickr Photo Gallery</h1>
         <BrowserRouter>
           <div>
             <Nav/>

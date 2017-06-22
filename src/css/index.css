@@ -4,38 +4,67 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 80%;
-  margin: auto;
-}
-.main-nav ul {
-  display: flex;
-  justify-content: space-around;
+h1, a {
+  text-align: center;
 }
 
-.photo-container {
-  max-width: 80%;
-  margin: auto;
+.main-nav li {
+  width: 100%;
+  margin-bottom: 1em;
 }
+.main-nav a {
+  display: block;
+  background: #438bbd;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+}
+
+.main-nav a:hover {
+  background-color: #275270;
+}
+
 .photo-container ul {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-
-.photo-container ul li {
-  padding: 5px;
-  max-height: 200px;
-  max-width: 200px;
-}
-
 .photo-container ul li img {
   max-width: 100%;
   max-height: 200px;
+}
+
+@media only screen and (min-width: 768px)  {
+  .container {
+    max-width: 80%;
+    margin: auto;
+  }
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+  }
+  .main-nav li {
+    margin: 10px;
+    width: 100px;
+  }
+  .photo-container ul li {
+    padding: 5px;
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .photo-container ul li img {
+    max-width: 100%;
+    max-height: 130px;
+  }
+
 }
