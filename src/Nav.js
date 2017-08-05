@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 const Nav = ()=> (
     <nav className="main-nav">
       <ul>
-          <li><NavLink to='/cats' activeClassName="selected">Cats</NavLink></li>
-          <li><NavLink to='/flowers' activeClassName="selected">Flowers</NavLink></li>
-          <li><NavLink to='/rainbows' activeClassName="selected">Rainbows</NavLink></li>
-          <li><NavLink to='/cake' activeClassName="selected">Cake</NavLink></li>
+      	<li><NavLink exact to='/' activeClassName="selected">Home</NavLink></li>
+      	<li><NavLink to='/about' activeClassName="selected">About</NavLink></li>
+        <li><NavLink to='/portfolio' activeClassName="selected">Portfolio</NavLink></li>
+        <li><NavLink to='/resume' activeClassName="selected">Resume</NavLink></li>
       </ul>
     </nav>
 )
