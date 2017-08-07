@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, BrowserRouter, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import ProjectList from './ProjectList';
+
 
 
 function SelectOption(props){
@@ -11,7 +13,7 @@ function SelectOption(props){
 			<ul>
 		 	{sectionOptions.map(function(option){
 			 		return (
-			 			<li 
+			 			<li
 			 				style={option===props.selectedOption ? {color: 'blue'} : null}
 			 				key={option}
 			 				onClick={props.onSelect.bind(null, option)}>
@@ -46,7 +48,7 @@ class Portfolio extends React.Component {
 		});
 	}
 	render(){
-		
+
 		return (
  			<BrowserRouter>
 				<div>
@@ -55,10 +57,11 @@ class Portfolio extends React.Component {
 					<SelectOption
 						selectedOption={this.state.selectedOption}
 						onSelect={this.updateSection}/>
+					<ProjectList/>
 				</div>
 			</BrowserRouter>
 		)
-		
+
 	}
 }
 

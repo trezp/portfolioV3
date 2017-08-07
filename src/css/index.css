@@ -18,8 +18,10 @@ h1, a {
 .main-nav li {
   width: 100%;
   margin-bottom: 1em;
+  cursor: pointer;
 }
 .main-nav a {
+  cursor: pointer;
   display: block;
   background: #438bbd;
   border-radius: 3px;
