@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProjectList from './ProjectList';
-
+import api from './utils/api.js';
 
 
 function SelectOption(props){
-	const sectionOptions = ['professional', 'smaller', 'inprogress', 'other']
+	const sectionOptions = ['All', 'JavaScript', 'Java', 'Python', 'other']
 
 	return (
 		<nav className="main-nav">
@@ -26,6 +26,34 @@ function SelectOption(props){
 	)
 }
 
+function ProjectGrid(props){
+	return (
+
+		<ul className="project-grid">
+			{props.repos.map(function(repo, index){
+				return (
+					<li key={repo.name}>
+						<div>#{index + 1}</div>
+						<ul>
+							<li>
+								<img
+									src={repo.owner.avatar_url}
+									alt={'Avatar for ' + repo.owner.login}/>
+							</li>
+							<li><a href={repo.html_url}>{repo.name}</a></li>
+							<li>@{repo.owner.login}</li>
+							<li>{repo.stargazers_count} stars</li>
+						</ul>
+					</li>
+				)
+			})};
+		</ul>
+	)
+}
+
+ProjectGrid.propTypes = {
+	repos: PropTypes.array.isRequired
+}
 SelectOption.propTypes = {
 	selectedOption: PropTypes.string.isRequired,
 	onSelect: PropTypes.func.isRequired
@@ -35,17 +63,30 @@ class Portfolio extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			selectedOption : "professional"
+			selectedOption : "All",
+			repos: null
 		};
 		this.updateSection = this.updateSection.bind(this);
 	}
-
+	componentDidMount(){
+		this.updateSection(this.state.selectedOption)
+	}
 	updateSection(option){
 		this.setState(function(){
 			return {
-				selectedOption: option
+				selectedOption: option,
+				repos: null
 			}
 		});
+
+		api.fetchPopularRepos(option)
+			.then(function(repos){
+				this.setState(function(){
+					return {
+						repos: repos
+					}
+				})
+		}.bind(this));
 	}
 	render(){
 
@@ -57,7 +98,11 @@ class Portfolio extends React.Component {
 					<SelectOption
 						selectedOption={this.state.selectedOption}
 						onSelect={this.updateSection}/>
+						{!this.state.repos ? <p>LOADING</p> :
+							<ProjectGrid repos={this.state.repos}/>
+						}
 					<ProjectList/>
+
 				</div>
 			</BrowserRouter>
 		)
