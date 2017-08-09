@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProjectList from './ProjectList';
 import api from './utils/api.js';
+import './css/project-grid.css'
 
 
 function SelectOption(props){
@@ -29,10 +30,10 @@ function SelectOption(props){
 function ProjectGrid(props){
 	return (
 
-		<ul className="project-grid">
+		<ul className="repos-grid">
 			{props.repos.map(function(repo, index){
 				return (
-					<li key={repo.name}>
+					<li className="repos-container" key={repo.name}>
 						<div>#{index + 1}</div>
 						<ul>
 							<li>

@@ -5,10 +5,10 @@ import projects from './projects';
 function ProjectList(props){
 
   return (
-    <ul>
+    <ul className="project-container">
       {projects.map((project) =>{
         return (
-          <li key={project.id}  className="project-container">
+          <li key={project.id}  className="project">
             <h3>{project.title}</h3>
             <img src={project.thumbnail}/>
             <h4>{project.tagline}</h4>
