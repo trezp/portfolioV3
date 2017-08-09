@@ -1,0 +1,21 @@
+.repos-grid, .project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.repos-container {
+  width: 100px;
+  padding: 30px;
+}
+
+.repos-grid img, .project img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.project {
+  width: 27%;
+  padding: 3%;
+  padding-left: 0;
+}
