@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router }  from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProjectList from './ProjectList';
-import api from './utils/api.js';
-import './css/project-grid.css'
+import api from '../utils/api.js';
+import '../css/project-grid.css'
 
 
 function SelectOption(props){
@@ -92,7 +92,7 @@ class Portfolio extends React.Component {
 	render(){
 
 		return (
- 			<BrowserRouter>
+ 			<Router>
 				<div>
 					<h2>Portfolio</h2>
 					<p>This is my portfolio.</p>
@@ -103,9 +103,8 @@ class Portfolio extends React.Component {
 							<ProjectGrid repos={this.state.repos}/>
 						}
 					<ProjectList/>
-
 				</div>
-			</BrowserRouter>
+			</Router>
 		)
 
 	}

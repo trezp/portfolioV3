@@ -5,23 +5,23 @@ import React, { Component } from 'react';
 
 //App Components
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
-import Nav from './Nav';
-import Home from './Home'
-import About from './About'
-import Portfolio from './Portfolio';
-import Resume from './Resume';
-import Footer from './Footer';
+import Nav from './components/Nav';
+import Home from './components/Home'
+import About from './components/About'
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="container">
         <h1>Treasure Porth</h1>
-        <BrowserRouter>
+        <Router>
           <div>
             <Nav/>
             <Switch>
@@ -32,7 +32,7 @@ class App extends Component {
             </Switch>
             <Footer/>
           </div>
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }
