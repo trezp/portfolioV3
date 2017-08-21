@@ -1,0 +1,84 @@
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none; }
+
+.uppercase, .btn-primary, .btn-dark, .home h1, .home h3 {
+  text-transform: uppercase; }
+
+.img-responsive, .home {
+  max-width: 100%;
+  height: auto; }
+
+.vertical-center, .home {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center; }
+
+h1 {
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  color: #8F0853;
+  margin: 0;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 7px; }
+  h1 span {
+    font-weight: 300; }
+
+h3 {
+  color: #333333;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 20px; }
+  h3 span {
+    padding-bottom: 10px; }
+
+.btn-primary, .btn-dark {
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  background: #8F0853;
+  color: #FFF;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  border: solid 1px #FFF;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  margin: 10px;
+  width: 200px; }
+  .btn-primary:hover, .btn-dark:hover {
+    background: #000;
+    border: solid 1px #000;
+    color: #FFF; }
+
+.btn-dark {
+  color: #333333;
+  border: solid 1px #333333; }
+  .btn-dark:hover {
+    background: #8F0853;
+    border-color: #8F0853;
+    color: #FFF; }
+
+.home {
+  background-image: url("/images/cityscape.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  text-align: center;
+  justify-content: center; }
+  .home h3 span {
+    font-weight: bold; }
+
+ul.main-nav {
+  display: flex;
+  justify-content: center; }
+
+body {
+  font-family: "Roboto", Arial, sans-serif; }
+
+/*# sourceMappingURL=index.css.map */

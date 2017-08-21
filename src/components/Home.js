@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Nav from './Nav';
 
-function Home(props){
+class Home extends React.Component {
+  render(){
 	return (
-		<div>
-			<h2>Home</h2>
-			<p>This is my home.</p>
-		</div>
-	);
+	  <div className="home">
+		<header>
+			<h1>Treasure Porth</h1>
+			<h3>Full Stack <span>JavaScript</span> Developer</h3>
+		</header>
+	  </div>
+    )
+  }
 }
 
 export default Home;

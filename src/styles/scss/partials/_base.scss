@@ -1,0 +1,84 @@
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+//utilities 
+.uppercase {
+	text-transform: uppercase;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+}
+//headers 
+h1 {
+    font-family: $font-secondary;
+    color: $brand-primary;
+    margin: 0;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: 7px;
+
+    span {
+        font-weight: 300;
+    }
+}
+
+h3 {
+    color: $gray-dark;
+    letter-spacing: 2px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+
+    span {
+        padding-bottom: 10px;
+    }
+}
+
+//buttons 
+.btn-primary {
+    @extend .uppercase;
+    font-family: $font-secondary;
+    background: $brand-primary;
+	color: $white;
+	letter-spacing: 3px;
+	padding: 10px 20px;
+    border: solid 1px $white;
+    border-radius: 5px;
+	letter-spacing: 3px;
+	margin: 10px;
+    width: 200px;
+    
+    &:hover {
+		background: $black;
+		border: solid 1px $black;
+		color: $white;
+	}
+}
+
+.btn-dark {
+    @extend .btn-primary;
+    color: $gray-dark;
+	border: solid 1px $gray-dark;
+
+	&:hover {
+		background: $brand-primary;
+		border-color: $brand-primary;
+		color: $white;
+	}
+}
+//

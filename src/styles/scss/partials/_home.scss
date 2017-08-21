@@ -1,0 +1,18 @@
+.home {
+	background-image: url('/images/cityscape.jpg');
+    background-size: cover;
+	background-position: center center;
+	height: 100vh;
+    text-align: center;
+    justify-content: center;
+	@extend .img-responsive;
+    @extend .vertical-center;
+    
+    h1, h3 {
+        @extend .uppercase;
+    }
+
+    h3 span {
+        font-weight: bold;
+    }
+}

@@ -3,7 +3,8 @@ import { BrowserRouter as Router }  from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ProjectList from './ProjectList';
 import api from '../utils/api.js';
-import '../css/project-grid.css'
+import '../styles/css/project-grid.css'
+import Loading from "./Loading"
 
 
 function SelectOption(props){
@@ -99,7 +100,7 @@ class Portfolio extends React.Component {
 					<SelectOption
 						selectedOption={this.state.selectedOption}
 						onSelect={this.updateSection}/>
-						{!this.state.repos ? <p>LOADING</p> :
+						{!this.state.repos ? <Loading text="Please Wait" /> :
 							<ProjectGrid repos={this.state.repos}/>
 						}
 					<ProjectList/>
