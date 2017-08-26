@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 
 
 //App Components
-import Nav from './components/Nav';
-import Footer from './components/Footer';
+import Routes from './components/Routes';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Nav/>
-        <Footer/>
+        <Routes/>
       </div>
     );
   }
