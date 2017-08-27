@@ -9,13 +9,18 @@
     @extend .vertical-center;
     
     header {
-        width: 100%;
+        margin-bottom: 3em;
+        width: 80%;
     }
     h1, h3 {
         @extend .uppercase;
     }
 
-    h3 span {
-        font-weight: bold;
+    h3 {
+        font-size: 1.5em;
+        font-weight: 500;
+        span {
+            font-weight: bold;
+        }
     }
 }

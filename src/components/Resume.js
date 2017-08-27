@@ -6,15 +6,15 @@ function Resume(){
 	return (
 		<div>
 			<Nav/>
-			<div class="resume">
-				<div class="contact-info-block">
+			<div className="resume">
+				<div className="contact-info-block">
           <h1>Treasure Porth</h1>
           <h2>treasure.porth@gmail.com</h2>
 					<h2><strong><a href="index.html">treasureporth.com</a></strong></h2>
-					<h2><a href="http://github.com/trezp"><strong><i class="fa fa-code-fork"></i> Github</strong></a></h2>
+					<h2><a href="http://github.com/trezp"><strong><i className="fa fa-code-fork"></i> Github</strong></a></h2>
 				</div>
 			
-				<div class="technical-skills">
+				<div className="technical-skills">
 					<h3>Technical Skills</h3>
 					<p>JavaScript + jQuery, HTML/CSS, SASS+LESS+Bootstrap, Jade, Node, Express + Mongoose,
 						MongoDB, Python, responsive design, git and github.

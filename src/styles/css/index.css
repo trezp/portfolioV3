@@ -80,15 +80,18 @@ h3 {
   text-align: center;
   justify-content: center; }
   .home header {
-    width: 100%; }
-  .home h3 span {
-    font-weight: bold; }
+    margin-bottom: 3em;
+    width: 80%; }
+  .home h3 {
+    font-size: 1.5em;
+    font-weight: 500; }
+    .home h3 span {
+      font-weight: bold; }
 
 ul.main-nav {
-  display: flex;
-  justify-content: space-between; }
+  display: flex; }
   ul.main-nav li {
-    margin: 2em;
+    margin: 1em;
     flex-grow: 1; }
     ul.main-nav li a {
       display: block; }
