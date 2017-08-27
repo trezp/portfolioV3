@@ -8,6 +8,9 @@
 	@extend .img-responsive;
     @extend .vertical-center;
     
+    header {
+        width: 100%;
+    }
     h1, h3 {
         @extend .uppercase;
     }

@@ -1,4 +1,13 @@
 ul.main-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    
+    li {
+        margin: 2em;
+        flex-grow: 1;
+
+        a {
+            display: block;
+        }
+    }
 }

@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #eeeeee; }
+
 ul {
   list-style-type: none;
   padding-left: 0; }
@@ -5,7 +9,7 @@ ul {
 a {
   text-decoration: none; }
 
-.uppercase, .btn-primary, .btn-dark, .home h1, .home h3 {
+.uppercase, .btn-transparent, .btn-primary, .btn-dark, .home h1, .home h3 {
   text-transform: uppercase; }
 
 .img-responsive, .home {
@@ -32,13 +36,18 @@ h1 {
 
 h3 {
   color: #333333;
-  letter-spacing: 2px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  padding-bottom: 20px; }
+  letter-spacing: 2px; }
   h3 span {
     padding-bottom: 10px; }
+
+.btn-transparent {
+  color: #333333;
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  padding: 10px 20px;
+  border: solid 1px #333333;
+  letter-spacing: 3px;
+  font-weight: 200;
+  border-radius: 5px; }
 
 .btn-primary, .btn-dark {
   font-family: "Open Sans Condensed", Arial, sans-serif;
@@ -49,7 +58,6 @@ h3 {
   border: solid 1px #FFF;
   border-radius: 5px;
   letter-spacing: 3px;
-  margin: 10px;
   width: 200px; }
   .btn-primary:hover, .btn-dark:hover {
     background: #000;
@@ -71,14 +79,33 @@ h3 {
   height: 100vh;
   text-align: center;
   justify-content: center; }
+  .home header {
+    width: 100%; }
   .home h3 span {
     font-weight: bold; }
 
 ul.main-nav {
   display: flex;
-  justify-content: center; }
+  justify-content: space-between; }
+  ul.main-nav li {
+    margin: 2em;
+    flex-grow: 1; }
+    ul.main-nav li a {
+      display: block; }
 
-body {
-  font-family: "Roboto", Arial, sans-serif; }
+.about {
+  max-width: 80%;
+  margin: auto;
+  display: flex; }
+  .about > div {
+    padding: 2em; }
+  .about ul {
+    display: flex;
+    justify-content: space-around; }
+  .about p {
+    padding-bottom: 2em; }
+  .about img {
+    border-radius: 50%;
+    max-height: 30vh; }
 
 /*# sourceMappingURL=index.css.map */

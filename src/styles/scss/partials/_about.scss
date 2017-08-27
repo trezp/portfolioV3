@@ -1,0 +1,21 @@
+.about {
+    max-width: 80%; 
+    margin: auto;
+    display: flex;
+
+    & > div {
+        padding: 2em;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    p {
+        padding-bottom: 2em;
+    }
+    img {
+        border-radius: 50%;
+        max-height: 30vh;
+    }
+}
