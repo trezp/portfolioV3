@@ -9,6 +9,13 @@ ul {
 a {
   text-decoration: none; }
 
+a.link-default {
+  color: #8F0853; }
+  a.link-default:visited {
+    color: #8F0853; }
+  a.link-default:hover {
+    color: #d70c7d; }
+
 .uppercase, .btn-transparent, .btn-primary, .btn-dark, .home h1, .home h3 {
   text-transform: uppercase; }
 
@@ -94,7 +101,16 @@ ul.main-nav {
     margin: 1em;
     flex-grow: 1; }
     ul.main-nav li a {
-      display: block; }
+      display: block;
+      text-align: center;
+      color: #333333; }
+      ul.main-nav li a:hover {
+        background: #8F0853;
+        color: #FFF;
+        transition: .2s; }
+  ul.main-nav .selected {
+    background: #8F0853;
+    color: #FFF; }
 
 .about {
   max-width: 80%;
@@ -110,5 +126,28 @@ ul.main-nav {
   .about img {
     border-radius: 50%;
     max-height: 30vh; }
+
+.resume {
+  max-width: 90%;
+  margin: auto;
+  line-height: 1.5em; }
+  .resume h1 {
+    color: #333333; }
+  .resume h3, .resume h4, .resume p {
+    margin: 0; }
+  .resume h3 {
+    color: #8F0853; }
+  .resume .block-contact {
+    display: flex;
+    color: #333333; }
+    .resume .block-contact > * {
+      padding-right: 15px; }
+  .resume .block-tech-skills span, .resume .block-ed span {
+    font-weight: bold; }
+  .resume .block-work-exp ul {
+    padding-left: 40px;
+    list-style-type: circle; }
+  .resume .block-ed {
+    padding-bottom: 1em; }
 
 /*# sourceMappingURL=index.css.map */

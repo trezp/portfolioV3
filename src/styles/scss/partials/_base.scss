@@ -1,95 +1,104 @@
 body {
-    font-family: $font-primary;
-    background-color: $gray-lighter;
+  font-family: $font-primary;
+  background-color: $gray-lighter;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+a.link-default {
+  color: $brand-primary;
+  &:visited {
+    color: $brand-primary;
+  } 
+  &:hover {
+    color: lighten($brand-primary, 15%);
+  }
 }
 //utilities 
 .uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 .img-responsive {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-  
-    display: flex;
-    align-items: center;
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 //headers 
 h1 {
-    font-family: $font-secondary;
-    color: $brand-primary;
-    margin: 0;
-    font-weight: 900;
-    font-size: 50px;
-    letter-spacing: 7px;
+  font-family: $font-secondary;
+  color: $brand-primary;
+  margin: 0;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 7px;
 
-    span {
-        font-weight: 300;
-    }
+  span {
+    font-weight: 300;
+  }
 }
 
 h3 {
-    color: $gray-dark;
-    letter-spacing: 2px;
+  color: $gray-dark;
+  letter-spacing: 2px;
 
-    span {
-        padding-bottom: 10px;
-    }
+  span {
+    padding-bottom: 10px;
+  }
 }
 
 //buttons 
 
 .btn-transparent {
-    @extend .uppercase;
-    color: $gray-dark;
-    font-family: $font-secondary;
-    padding: 10px 20px;
-    border: solid 1px $gray-dark;
-    letter-spacing: 3px;
-    font-weight: 200;
-    border-radius: 5px;
+  @extend .uppercase;
+  color: $gray-dark;
+  font-family: $font-secondary;
+  padding: 10px 20px;
+  border: solid 1px $gray-dark;
+  letter-spacing: 3px;
+  font-weight: 200;
+  border-radius: 5px;
 }
 .btn-primary {
-    @extend .uppercase;
-    font-family: $font-secondary;
-    background: $brand-primary;
-	color: $white;
-	letter-spacing: 3px;
-	padding: 10px 20px;
-    border: solid 1px $white;
-    border-radius: 5px;
-	letter-spacing: 3px;
-    width: 200px;
-    
-    &:hover {
-		background: $black;
-		border: solid 1px $black;
-		color: $white;
-	}
+  @extend .uppercase;
+  font-family: $font-secondary;
+  background: $brand-primary;
+  color: $white;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  border: solid 1px $white;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  width: 200px;
+  
+  &:hover {
+    background: $black;
+    border: solid 1px $black;
+    color: $white;
+  } 
 }
 
 .btn-dark {
-    @extend .btn-primary;
-    color: $gray-dark;
-	border: solid 1px $gray-dark;
+  @extend .btn-primary;
+  color: $gray-dark;
+  border: solid 1px $gray-dark;
 
-	&:hover {
-		background: $brand-primary;
-		border-color: $brand-primary;
-		color: $white;
-	}
+  &:hover {
+    background: $brand-primary;
+    border-color: $brand-primary;
+    color: $white;
+  }
 }
 //

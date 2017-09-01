@@ -1,0 +1,41 @@
+.resume {
+  max-width: $main-container-width;
+  margin: auto;
+  line-height: 1.5em;
+  
+  h1 {
+    color: $gray-dark;
+  }
+  h3, h4, p {
+    margin: 0;
+  }
+  h3 {
+    color: $brand-primary;
+  }
+
+  .block-contact {
+    display: flex;
+    color: $gray-dark;
+
+    & > * {
+      padding-right: 15px;
+    }
+  }
+
+  .block-tech-skills, .block-ed {
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .block-work-exp {
+    ul {
+      padding-left: 40px;
+      list-style-type: circle;
+    }
+  }
+
+  .block-ed {
+    padding-bottom: 1em;
+  }
+}

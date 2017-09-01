@@ -7,7 +7,7 @@ import Routes from './components/Routes';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="top-level-container">
         <Routes/>
       </div>
     );

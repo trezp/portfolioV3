@@ -1,12 +1,25 @@
 ul.main-nav {
-    display: flex;
-    
-    li {
-        margin: 1em;
-        flex-grow: 1;
+  display: flex;
+  
+  li {
+    margin: 1em;
+    flex-grow: 1;
 
-        a {
-            display: block;
+    a {
+        display: block;
+        text-align: center;
+        color: $gray-dark;
+        
+        &:hover {
+          background: $brand-primary;
+          color: $white;
+          transition: .2s;
         }
     }
+  }
+
+  .selected {
+    background: $brand-primary;
+    color: $white;
+  }
 }
