@@ -1,11 +1,9 @@
 import React from 'react';
-import Nav from './Nav';
 import {Link} from 'react-router-dom';
 
 function About(props){
 	return (
 		<div>
-			<Nav/>
       <div className="about">
         <div>
           <img src="images/colorheadshot.jpg" alt="Treasure Porth, Web Developer"/>

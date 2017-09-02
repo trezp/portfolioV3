@@ -1,12 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
 import jobs from "../data/jobs";
 import { NavLink } from 'react-router-dom';
 
 function Resume(){
 	return (
 		<div>
-			<Nav/>
 			<div className="resume">
         <h1>Treasure Porth</h1>
         <div className="block-contact">
