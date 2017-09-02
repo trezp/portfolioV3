@@ -1,6 +1,6 @@
 .resume {
-  max-width: $main-container-width;
-  margin: auto;
+  @extend .main-container;
+  
   line-height: 1.5em;
   
   h1 {

@@ -1,0 +1,38 @@
+.portfolio-container {
+  @extend .main-container;
+
+  ul.portfolio-nav {
+    display: flex;
+  }  
+  .portfolio-nav li {
+    margin-right: 1em;
+
+    a {
+      font-size: 1.2em;
+      padding: 1em;
+      @extend .uppercase;
+
+      &:first-child {
+        padding-left: 0;
+      }
+      &.selected {
+        font-weight: 900;
+
+        &:before {
+          font-family: FontAwesome;
+          content: "\f0da ";
+        }
+      }
+    }
+  } 
+
+  .block-app {
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: 33% 33% 33%;
+
+    img {
+      @extend .img-responsive;
+    }
+  }
+}

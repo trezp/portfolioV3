@@ -1,3 +1,21 @@
+canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
 .home {
 	background-image: url('/images/cityscape.jpg');
     background-size: cover;
@@ -11,6 +29,7 @@
     header {
         margin-bottom: 3em;
         width: 80%;
+        z-index: 55;
     }
     h1, h3 {
         @extend .uppercase;

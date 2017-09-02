@@ -18,6 +18,12 @@ a.link-default {
     color: lighten($brand-primary, 15%);
   }
 }
+
+//containers 
+.main-container {
+  max-width: $main-container-width;
+  margin: 0 auto;
+}
 //utilities 
 .uppercase {
   text-transform: uppercase;
@@ -90,12 +96,11 @@ h3 {
 
 .btn-dark {
   @extend .btn-primary;
-  color: $gray-dark;
-  border: solid 1px $gray-dark;
+  color: $white;
 
   &:hover {
-    background: $brand-primary;
-    border-color: $brand-primary;
+    background: $gray-dark;
+    border-color: $gray-dark;
     color: $white;
   }
 }

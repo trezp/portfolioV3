@@ -21,7 +21,6 @@ function About(props){
             populations, and not being evil. I love to travel and I'm really good at karaoke.
           </p>
           <Link to="/resume" className="btn-primary">Origin Story</Link>
-          <Link to="/resume" className="btn-primary">Blog</Link>
           <Link to="/resume" className="btn-primary">Videos</Link>
         </div>
       </div>
