@@ -34,35 +34,33 @@ const PortfolioNav = ()=>{
   )
 }
 
-function Websites(props){
-	return (
+const Websites = () => {
+  return (
     <div>
       <p>{websites.description}</p>
-      <div className="block-app">
-        
-        {websites.websites.map((website)=>{
+        <div className="grid">
+        {websites.websites.map((website, index)=>{
           return (
-            <div key={website.title} className="block-website">
-              <h2>{website.title}</h2>
+            <div className="grid-item" key={index}>
+              <h3>{website.title}</h3>
               <img src={website.thumbnail} alt={website.alt}/>
             </div>
           )
         })}
-      </div>
+        </div>
     </div>
-	);
+  );
 }
 
 function Apps(props){
 	return (
 		<div className="block-app">
-    {projects.map((project)=>{
+    {projects.map((project, index)=>{
       return (
-        <div key={project.title}> 
-          <div className="left">
+        <div key={index} className="proj"> 
             <h2 className="top">{project.title}</h2>
-            <img src={project.thumbnail} alt=""/>
-          </div>
+            <span><img src={project.thumbnail} alt={project.tagline}/></span>
+            <p>{project.tagline}</p>
         </div>
       )
     })}

@@ -28,11 +28,38 @@
 
   .block-app {
     display: grid;
-    grid-gap: .5em;
-    grid-template-columns: 33% 33% 33%;
+    grid-gap: 1em;
+    grid-template-columns: 50% 50%;
 
+    .proj {
+      span {
+        display: block;
+        height: 300px;
+        color: purple;
+      }
+    }
     img {
       @extend .img-responsive;
+      max-height: 300px;
     }
   }
 }
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-item { 
+  max-width: 300px;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+

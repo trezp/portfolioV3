@@ -185,7 +185,26 @@ ul.main-nav {
         content: "\f0da "; }
 .portfolio-container .block-app {
   display: grid;
-  grid-gap: .5em;
-  grid-template-columns: 33% 33% 33%; }
+  grid-gap: 1em;
+  grid-template-columns: 50% 50%; }
+  .portfolio-container .block-app .proj span {
+    display: block;
+    height: 300px;
+    color: purple; }
+  .portfolio-container .block-app img {
+    max-height: 300px; }
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.grid-item {
+  max-width: 300px;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 1em; }
+  .grid-item img {
+    max-width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

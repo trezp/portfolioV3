@@ -26,14 +26,6 @@ export default {
       "category": ["professional", "websites"],
     },
     {
-      "thumbnail": "images/screenshots/terrafirma-lg.png",
-      "images_url": ["http://lorempixel.com/500/500"],
-      "alt": "Terra Firma website",
-      "title": "Terra Firma",
-      "description": "Built front page",
-      "category": ["professional", "websites"],
-    },
-    {
       "thumbnail": "images/screenshots/alohapools.png",
       "images_url": ["http://lorempixel.com/500/500"],
       "alt": "Aloha Pools website",

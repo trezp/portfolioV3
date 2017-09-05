@@ -1,5 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch, 
+  NavLink
+ } from 'react-router-dom';
 
 function About(props){
 	return (
@@ -20,12 +25,31 @@ function About(props){
             I help run <a href="http://www.teamtreehouse.com/techdegrees">Treehouse's Full Stack JavaScript Techdegree program.</a> I'm happy as long as I have a problem to solve and something new to learn. I am passionate about doing meaningful work, providing affordable education, working with underserved
             populations, and not being evil. I love to travel and I'm really good at karaoke.
           </p>
-          <Link to="/resume" className="btn-primary">Origin Story</Link>
-          <Link to="/resume" className="btn-primary">Videos</Link>
+          <ul className="about-nav">
+            <li><NavLink exact to='/about/origins' className="btn-primary">Origin Story</NavLink></li>
+            <li><NavLink exact to='/about/video' className="btn-primary">Sample Video</NavLink></li>
+          </ul>
+          <div>
+            <Route path="/about/origins" component={Origin}/>
+            <Route path="/about/video" component={Video}/>
+          </div>
         </div>
       </div>
 		</div>
 	);
 }
+
+const Origin = ()=>{
+  return (
+    <h3>Origin Story</h3>
+  )
+}
+
+const Video = ()=>{
+  return (
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kXjF0-yCmpk" frameBorder="0" allowfullscreen></iframe>
+  )
+}
+
 
 export default About;

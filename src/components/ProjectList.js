@@ -6,9 +6,9 @@ function ProjectList(props){
 
   return (
     <ul className="project-container">
-      {projects.map((project) =>{
+      {projects.map((project, index) =>{
         return (
-          <li key={project.id}  className="project">
+          <li key={index}  className="project">
             <h3>{project.title}</h3>
             <img src={project.thumbnail}/>
             <h4>{project.tagline}</h4>
