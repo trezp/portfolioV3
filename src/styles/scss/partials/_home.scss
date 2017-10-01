@@ -30,6 +30,11 @@ canvas {
         margin-bottom: 3em;
         width: 80%;
         z-index: 55;
+
+        img {
+            border-radius: 50%;
+            max-height: 20vh;
+        }
     }
     h1, h3 {
         @extend .uppercase;
@@ -40,6 +45,14 @@ canvas {
         font-weight: 500;
         span {
             font-weight: bold;
+        }
+    }
+    .fa-arrow-circle-right {
+        color: $brand-primary;
+        font-size: 3em;
+
+        &:hover {
+            color: lighten($brand-primary, 5%);
         }
     }
 }

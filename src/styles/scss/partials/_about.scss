@@ -1,17 +1,21 @@
 .about {
-  @extend .main-container;
   display: flex;
 
   & > div {
     padding: 2em;
   }
-  ul {
+  ul.social-media {
     display: flex;
     justify-content: space-around;
+
+    .fa {
+      @extend .link-default;
+      font-size: 1.5em;
+    }
   }
 
   p {
-    padding-bottom: 2em;
+    line-height: 1.80em;
   }
   img {
     border-radius: 50%;

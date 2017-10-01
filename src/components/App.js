@@ -5,26 +5,21 @@ import {
  Switch
 } from 'react-router-dom';
 
-import Nav from './Nav';
+
 import Home from './Home';
-import About from './About';
 import PortfolioContainer from './PortfolioContainer';
-import Resume from './Resume';
 
 class App extends React.Component {
   render() {
     return (
       <Router>
         <div>
-          <Route path="/(.+)" render={(() => 
+          {/* <Route path="/(.+)" render={(() => 
             <Nav/>
-          )}/>
+          )}/> */}
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/portfolio" component={PortfolioContainer}/>
-            <Route path="/resume" component={Resume}/>
-            <Route component={NoMatch}/>
+            <Route exact path="/portfolio" component={PortfolioContainer}/>
           </Switch>
         </div>
       </Router>
@@ -34,9 +29,11 @@ class App extends React.Component {
 
 const NoMatch = ({ location }) => (
   <div>
+    <PortfolioContainer/>
     <h3>Oops, sorry! Nothing for <code>{location.pathname}</code> was found.</h3>
   </div>
 )
+
 
 export default App;
 

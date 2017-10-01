@@ -9,14 +9,14 @@ ul {
 a {
   text-decoration: none; }
 
-a.link-default {
+.link-default, .about ul.social-media .fa {
   color: #8F0853; }
-  a.link-default:visited {
+  .link-default:visited, .about ul.social-media .fa:visited {
     color: #8F0853; }
-  a.link-default:hover {
+  .link-default:hover, .about ul.social-media .fa:hover {
     color: #d70c7d; }
 
-.main-container, .about, .resume, .portfolio-container {
+.main-container, .resume, .portfolio-container {
   max-width: 90%;
   margin: 0 auto; }
 
@@ -107,16 +107,24 @@ canvas {
     margin-bottom: 3em;
     width: 80%;
     z-index: 55; }
+    .home header img {
+      border-radius: 50%;
+      max-height: 20vh; }
   .home h3 {
     font-size: 1.5em;
     font-weight: 500; }
     .home h3 span {
       font-weight: bold; }
+  .home .fa-arrow-circle-right {
+    color: #8F0853;
+    font-size: 3em; }
+    .home .fa-arrow-circle-right:hover {
+      color: #a70961; }
 
 ul.nav-base {
   display: flex; }
   ul.nav-base li {
-    margin: 1em;
+    margin-right: 1em;
     flex-grow: 1; }
     ul.nav-base li a {
       display: block;
@@ -139,11 +147,13 @@ ul.main-nav {
   display: flex; }
   .about > div {
     padding: 2em; }
-  .about ul {
+  .about ul.social-media {
     display: flex;
     justify-content: space-around; }
+    .about ul.social-media .fa {
+      font-size: 1.5em; }
   .about p {
-    padding-bottom: 2em; }
+    line-height: 1.80em; }
   .about img {
     border-radius: 50%;
     max-height: 30vh; }
